@@ -83,9 +83,24 @@ IOReturn Xone_Controller::newReportDescriptor(IOMemoryDescriptor** descriptor) c
     return kIOReturnSuccess;
 }
 
+void Xone_Prepare(XONE_OUT_RUMBLE &rumble)
+{
+    // 09 00 03 09 00 0F 00 00 1D 1D FF 00 00
+    memset(&rumble, 0, sizeof(rumble));
+    rumble.header.message_type = 0x09;
+    rumble.header.packet_size = 0x09; // sizeof - 3
+    rumble.rumble_style = 0x0F;
+    rumble.left_hand = 0x1D;
+    rumble.right_hand = 0x1D;
+    rumble.length = 0xFF;
+}
+
 // Handles a message from the userspace IOHIDDeviceInterface122::setReport function
 IOReturn Xone_Controller::setReport(IOMemoryDescriptor* report, IOHIDReportType reportType, IOOptionBits options)
 {
+    XONE_OUT_RUMBLE rumble;
+    Xone_Prepare(rumble);
+    GetOwner(this)->queue_write(&rumble, sizeof(rumble));
     XONE_HEADER* header;
     report->readBytes(0, header, 4);
     switch(header->message_type)
