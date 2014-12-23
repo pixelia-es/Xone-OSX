@@ -12,6 +12,7 @@
 		624D66DC19C95EE200D01105 /* Xone_Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 624D66DB19C95EE200D01105 /* Xone_Controller.cpp */; };
 		62788F6819C37D09000435ED /* Xone_Driver.h in Headers */ = {isa = PBXBuildFile; fileRef = 62788F6719C37D09000435ED /* Xone_Driver.h */; };
 		62788F6A19C37D09000435ED /* Xone_Driver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62788F6919C37D09000435ED /* Xone_Driver.cpp */; };
+		62A322421A49302600446CD3 /* xonehid_alt.h in Headers */ = {isa = PBXBuildFile; fileRef = 62A322411A49302600446CD3 /* xonehid_alt.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		62788F6619C37D09000435ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62788F6719C37D09000435ED /* Xone_Driver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Xone_Driver.h; sourceTree = "<group>"; };
 		62788F6919C37D09000435ED /* Xone_Driver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Xone_Driver.cpp; sourceTree = "<group>"; };
+		62A322411A49302600446CD3 /* xonehid_alt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xonehid_alt.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 				624D66DA19C95D7900D01105 /* Xone_Controller.h */,
 				624D66DB19C95EE200D01105 /* Xone_Controller.cpp */,
 				62157DA619D07DB100240AAD /* xonehid.h */,
+				62A322411A49302600446CD3 /* xonehid_alt.h */,
 			);
 			name = Xone_Controller;
 			sourceTree = "<group>";
@@ -92,6 +95,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62A322421A49302600446CD3 /* xonehid_alt.h in Headers */,
 				62157DA719D07DB100240AAD /* xonehid.h in Headers */,
 				62788F6819C37D09000435ED /* Xone_Driver.h in Headers */,
 			);

@@ -26,7 +26,7 @@
 #include "Xone_Controller.h"
 #include "ControlStruct.h"
 namespace HID_One {
-#include "xonehid.h"
+#include "xonehid_alt.h"
 }
 #include "Xone_Driver.h"
 
