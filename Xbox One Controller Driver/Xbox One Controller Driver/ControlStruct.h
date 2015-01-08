@@ -68,7 +68,7 @@ enum {
 
 enum {
     heart_beat_length       = 0x04,
-    guide_report_legnth     = 0x02,
+    guide_report_length     = 0x02,
     force_feedback_length   = 0x09,
     in_report_length        = 0x0E,
 };
